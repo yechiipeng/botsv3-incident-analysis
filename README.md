@@ -13,3 +13,19 @@ Prior to ingestion into software and analysis of the data, the integrity of the 
 - Evidence: `evidence/00_preflight/md5_verification.png`
 
 The matching checksum confirms that the dataset was not corrupted or altered prior to ingestion.
+
+### 1.2 App stack verification
+
+The required BOTSv3 app stack was verified to ensure correct field extraction and data normalization across endpoint, cloud, network, and email telemetry, consistent with a real SOC deployment.
+
+The following applications were originally not present but were eventually installed:
+- Splunk Add-on for Microsoft Sysmon
+- Splunk Add-on for Microsoft Office 365
+- Splunk Stream
+- Splunk Common Information Model (CIM)
+
+The Splunk App for OSquery was not present in the environment and was not required for analysis, as the BOTSv3 dataset does not include OSquery telemetry. Endpoint visibility is provided via Sysmon-based data sources.
+
+Evidence:
+- Installed app list: `evidence/01_installation/apps_list_sysmon,apps_list_office365,apps_list_stream,apps_list_cim,apps_not_installed`
+- OSquery absence verification: `evidence/01_installation/osquery_not_found_for_download.png`
