@@ -54,3 +54,13 @@ Evidence:
 Initial ingestion resulted in a single forced sourcetype; the dataset was subsequently re-ingested using recursive folder monitoring with automatic sourcetype detection to ensure correct parsing.
 Evicence:
 - `evidence/02_validation/proof_of_proper_ingestion.png`
+## Baseline dataset orientation
+
+A baseline orientation review was performed prior to question-driven investigation to understand dataset scope and typical activity patterns within the `botsv3_clean` index. This included high-level profiling of dataset volume, sourcetype composition, and the most active hosts/users/destinations to support anomaly-driven analysis.
+
+Evidence:
+- Dataset overview: `evidence/02_baseline/dataset_overview.png`
+- Event volume over time: `evidence/02_baseline/event_volume_timetable.png``evidence/02_baseline/event_volume_timechart.png`
+- Top sourcetypes: `evidence/02_baseline/top_sourcetypes.png`
+- Top users: `evidence/02_baseline/top_users.png`
+- Top destinations: `evidence/02_baseline/top_destinations.png`

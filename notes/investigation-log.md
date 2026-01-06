@@ -31,4 +31,11 @@
 - Actions taken: Re-ingested dataset using recursive folder monitoring with automatic sourcetype detection; validated index, sourcetypes, and time coverage
 - Findings: Multiple sourcetypes present; dataset spans full attack window; ingestion issues resolved
 - Evidence captured (path): evidence/02_validation/
+- Next step: Establish baseline
+### Entry 5
+- Date/Time: 2026-01-06
+- Objective: Establish baseline understanding of dataset prior to investigation
+- Actions taken: Profiled dataset scope, event volume over time, and top hosts/users/destinations within botsv3_fixed
+- Findings: Dataset appears complete and diverse; baseline established for anomaly comparison
+- Evidence captured (path): evidence/02_baseline/
 - Next step: Begin question-driven incident analysis
