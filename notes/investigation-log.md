@@ -22,5 +22,13 @@
 - Objective: Verify required BOTSv3 app stack
 - Actions taken: Reviewed installed Splunk apps and searched for required components
 - Findings: The OSquery app was not present; dataset does not include OSquery telemetry; Sysmon may provide endpoint coverage instead
-- Evidence captured (path): evidence/01_installation/osquery_not_found_for_download.png
+- Evidence captured (path): evidence/01_installation/
 - Next step: Proceed to data validation and sourcetype verification
+
+### Entry 4
+- Date/Time: 2026-01-06
+- Objective: Validate BOTSv3 dataset completeness and correct parsing
+- Actions taken: Re-ingested dataset using recursive folder monitoring with automatic sourcetype detection; validated index, sourcetypes, and time coverage
+- Findings: Multiple sourcetypes present; dataset spans full attack window; ingestion issues resolved
+- Evidence captured (path): evidence/02_validation/
+- Next step: Begin question-driven incident analysis

@@ -30,3 +30,27 @@ Evidence:
 - Installed app list: `evidence/01_installation/apps_list_sysmon,apps_list_office365,apps_list_stream,apps_list_cim,apps_not_installed`
 - OSquery absence verification: `evidence/01_installation/osquery_not_found_for_download.png`
 Additional security and cloud add-ons were present in the environment but were not overly required for BOTSv3 analysis and are therefore not discussed further.
+## 2. Dataset Validation
+
+### 2.1 Index identification
+Event count analysis confirmed that the BOTSv3 dataset was successfully ingested into the `botsv3_clean` index.
+
+Evidence:
+- `evidence/02_validation/index_discovery.png`
+
+### 2.2 Sourcetype distribution
+Sourcetype distribution confirms ingestion of endpoint, cloud, email, and network telemetry required for full kill chain analysis.
+
+Evidence:
+- `evidence/02_validation/sourcetype_distribution.png`
+
+### 2.3 Time coverage validation
+Time coverage analysis confirms that the dataset spans a meaningful attack window suitable for longitudinal incident analysis.
+
+Evidence:
+- `evidence/02_validation/time_coverage.png`
+
+### Ingestion correction note
+Initial ingestion resulted in a single forced sourcetype; the dataset was subsequently re-ingested using recursive folder monitoring with automatic sourcetype detection to ensure correct parsing.
+Evicence:
+- `evidence/02_validation/proof_of_proper_ingestion.png`
