@@ -29,3 +29,4 @@ The Splunk App for OSquery was not present in the environment and was not requir
 Evidence:
 - Installed app list: `evidence/01_installation/apps_list_sysmon,apps_list_office365,apps_list_stream,apps_list_cim,apps_not_installed`
 - OSquery absence verification: `evidence/01_installation/osquery_not_found_for_download.png`
+Additional security and cloud add-ons were present in the environment but were not overly required for BOTSv3 analysis and are therefore not discussed further.
