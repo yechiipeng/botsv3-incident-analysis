@@ -1,0 +1,4 @@
+index=botsv3 sourcetype="ms:o365:management" Workload=OneDrive
+| search Operation=*Upload* OR Operation=*File*
+| where like(SourceFileName,"%.lnk")
+| table _time UserId SourceFileName UserAgent ClientIP
