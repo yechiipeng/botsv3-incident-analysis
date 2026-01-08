@@ -1,0 +1,4 @@
+index=botsv3 sourcetype="stream:smtp"
+| search filename="*.docm" OR filename="*.xlsm" OR filename="*.pptm" OR "*.docm" OR "*.xlsm" OR "*.pptm"
+| table _time src dest subject filename
+| sort _time
